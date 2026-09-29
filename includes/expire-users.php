@@ -48,7 +48,7 @@ class Expire_Users {
 				} else {
 					$user->set_expire_timestamp( current_time( 'timestamp' ) );
 					$user->save_user();
-					wp_clear_auth_cookie();
+					wp_logout();
 				}
 			}
 
